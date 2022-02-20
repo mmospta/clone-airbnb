@@ -1,0 +1,79 @@
+{
+  "uuid": "d1dd1a44-e1af-4f85-9fb1-d9ac00ea42a4",
+  "lastMigration": 19,
+  "name": "Airbnb",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 4001,
+  "hostname": "0.0.0.0",
+  "routes": [
+    {
+      "uuid": "1dc8c525-d8d5-4a2e-b92a-18c7846ef4ed",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "citycard",
+      "responses": [
+        {
+          "uuid": "cc1c5a2a-1c18-4b7b-82e9-d58d00852952",
+          "body": "[\n  {\n    \"city\": \"Pattaya City\",\n    \"distance\": 122,\n    \"image\": \"https://a0.muscache.com/im/pictures/3a7b8005-28b8-48b8-8efa-0a6a00f7d5d8.jpg?im_w=720\"\n  },\n  {\n    \"city\": \"Hua Hin\",\n    \"distance\": 156,\n    \"image\": \"https://a0.muscache.com/im/pictures/2d80dcb3-cbe3-4414-ac0f-3a6af22b9ab3.jpg?im_w=720\"\n  },\n  {\n    \"city\": \"Chiang Mai\",\n    \"distance\": 572,\n    \"image\": \"https://a0.muscache.com/im/pictures/52b76ef5-00a6-4dc5-b21e-9fd6368c825f.jpg?im_w=720\"\n  },\n  {\n    \"city\": \"Koh Samui\",\n    \"distance\": 485,\n    \"image\": \"https://a0.muscache.com/im/pictures/aff9e173-b551-44e4-80f3-bd9b9d632f8b.jpg?im_w=720\"\n  }\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false
+        }
+      ],
+      "enabled": true,
+      "randomResponse": false,
+      "sequentialResponse": false
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ]
+}
