@@ -1,0 +1,80 @@
+.Header {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Header img {
+  height: 36px;
+}
+
+.Header > div:nth-child(2) {
+  display: flex;
+  gap: 30px;
+}
+
+.Header > div:nth-child(3) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.Profile {
+  background-color: white;
+  color: gray;
+  border-radius: 21px;
+  height: 42px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 5px;
+  /* justify-items: ; */
+}
+
+.FlexibleSection {
+  background-color: black;
+  position: relative;
+}
+
+.FlexibleSection div {
+  position: absolute;
+  z-index: 100;
+  color: white;
+  bottom: 100px;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.FlexibleSection button {
+  font-size: 20px;
+  font-weight: bold;
+  color: plum;
+  background-color: white;
+  border-radius: 30px;
+  height: 60px;
+  padding: 5px 20px;
+  border: none;
+}
+
+.FlexibleSection img {
+  width: 90%;
+  height: 45vw;
+  object-fit: cover;
+  object-position: 0px 100%;
+  margin: 5vw;
+  border-radius: 10px;
+}
+.CardTrip {
+  background-color: grey;
+}
