@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import classes from "./Home.module.css";
 import {
   MenuRounded,
@@ -6,37 +6,32 @@ import {
   LanguageRounded,
 } from "@mui/icons-material";
 
+type CardTripData = {
+  city: string;
+  distance: number;
+  image: string;
+};
+
 const Home = () => {
-  // fetch('http://localhost:8000/blogs', {
-  //     method: 'POST',
-  //     headers: { "Content-Type": "application/json" },
-  //     body: JSON.stringify(blog)
-  // }).then(() => {
-  //     console.log('new blog added');
-  //     setIsPending(false);
-  //     // history.go(-1);
-  //     history.push('/');
-  // })
+  const [cardsTrip, setCardsTrip] = useState<CardTripData[]>([]);
 
   useEffect(() => {
     fetch("http://localhost:4001/citycard")
       .then((res) => res.json())
       .then((result) => {
-        console.log(result);
+        setCardsTrip(result as CardTripData[]);
       });
   }, []);
+
+  useEffect(() => {
+    console.log(cardsTrip);
+  }, [cardsTrip]);
 
   return (
     <div>
       <Header />
       <Baner />
-
-      <div className={classes.CardTrip}>
-        <p>Inspiration for your next trip</p>
-        <div>
-          <img src="" alt="" />
-        </div>
-      </div>
+      <CardTrip cardsTrip={cardsTrip} />
     </div>
   );
 };
@@ -76,6 +71,23 @@ const Baner = () => {
         <button>I'm flexible</button>
       </div>
       <img src="https://picsum.photos/seed/picsum/900/600" alt="" />
+    </div>
+  );
+};
+
+const CardTrip = ({ cardsTrip }: { cardsTrip: CardTripData[] }) => {
+  return (
+    <div className={classes.CardTrip}>
+      <h2>Inspiration for your next trip</h2>
+      <div>
+        {cardsTrip.map((card) => (
+          <div>
+            <img src={card.image} alt="" />
+            <h3>{card.city}</h3>
+            <p>{card.distance} kiloetres away</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
