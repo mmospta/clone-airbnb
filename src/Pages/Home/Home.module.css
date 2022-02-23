@@ -85,6 +85,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  color: white;
 }
 
 .CardTrip div div {
@@ -108,16 +109,47 @@
   width: 23vw;
 }
 
-/* :nth-of-type(1) */
-
-/* .CardTrip h2 {
-  font-size: 2vw;
-} */
-
-/* .CardTrip div p:nth-child(2) {
-  font-size: 2rem;
+.CardExperience {
+  background-color: black;
+  color: white;
+  padding: 20px;
 }
 
-.CardTrip div p:nth-child(3) {
+.CardExperience h1 {
+  font-size: 2.6rem;
+}
+
+.CardExperience img {
+  width: 47vw;
+  height: 50vw;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.CardExperience button {
+  border: none;
+  padding: 15px 25px;
+  background-color: white;
+  border-radius: 10px;
   font-size: 1rem;
-} */
+  font-weight: 600;
+}
+
+.CardExperience > div:nth-child(2) {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.CardExperience > div:nth-child(3) {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.CardExperience div div div {
+  position: absolute;
+  z-index: 100;
+  top: 20px;
+  left: 20px;
+}
