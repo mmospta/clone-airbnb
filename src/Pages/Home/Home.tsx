@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import classes from "./Home.module.css";
+import expImg1 from "../../assets/pexels-francesco.jpg";
+import expImg2 from "../../assets/pexels-jeremy.jpg";
+
 import {
   MenuRounded,
   AccountCircleRounded,
@@ -32,6 +35,7 @@ const Home = () => {
       <Header />
       <Baner />
       <CardTrip cardsTrip={cardsTrip} />
+      <CardExperience />
     </div>
   );
 };
@@ -67,7 +71,7 @@ const Baner = () => {
   return (
     <div className={classes.FlexibleSection}>
       <div>
-        <p>Not sure where to go? Perfect.</p>
+        <h1>Not sure where to go? Perfect.</h1>
         <button>I'm flexible</button>
       </div>
       <img src="https://picsum.photos/seed/picsum/900/600" alt="" />
@@ -87,6 +91,32 @@ const CardTrip = ({ cardsTrip }: { cardsTrip: CardTripData[] }) => {
             <p>{card.distance} kiloetres away</p>
           </div>
         ))}
+      </div>
+    </div>
+  );
+};
+
+const CardExperience = () => {
+  return (
+    <div className={classes.CardExperience}>
+      <h2>Discover Airbnb Experiences</h2>
+      <div>
+        <div>
+          <div>
+            <h1>Things to do</h1>
+            <h1>on your trip</h1>
+            <button>Experiences</button>
+          </div>
+          <img src={expImg1} alt="" />
+        </div>
+        <div>
+          <div>
+            <h1>Things to do</h1>
+            <h1>on your trip</h1>
+            <button>Experiences</button>
+          </div>
+          <img src={expImg2} alt="" />
+        </div>
       </div>
     </div>
   );
