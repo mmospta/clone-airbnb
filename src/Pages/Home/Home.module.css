@@ -75,6 +75,49 @@
   margin: 5vw;
   border-radius: 10px;
 }
+
 .CardTrip {
-  background-color: grey;
+  background-color: white;
+  padding: 20px;
 }
+
+.CardTrip > div:nth-child(2) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.CardTrip div div {
+  overflow: hidden;
+  background-color: rgb(177, 109, 109);
+  width: 23vw;
+  height: 320px;
+  border-radius: 10px;
+}
+
+.CardTrip div div p {
+  padding-left: 10px;
+}
+
+.CardTrip div div h3 {
+  padding-left: 10px;
+}
+
+.CardTrip img {
+  object-fit: cover;
+  width: 23vw;
+}
+
+/* :nth-of-type(1) */
+
+/* .CardTrip h2 {
+  font-size: 2vw;
+} */
+
+/* .CardTrip div p:nth-child(2) {
+  font-size: 2rem;
+}
+
+.CardTrip div p:nth-child(3) {
+  font-size: 1rem;
+} */
